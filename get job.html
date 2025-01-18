@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Registration Form</title>
+    <link rel="stylesheet" href="bb.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Registration Form</h1>
+        <p>Select an industry/job type and fill in the relevant details.</p>
+
+        <form id="DynamicForm" method="post">
+            <form id="Form" method="post">
+            <!-- Select Industry/Job Type -->
+            <div class="section-title">Category  details</div>
+            <div class="row">
+                <label for="category-select">Select Category</label>
+                <select id="category-select" name="category" required>
+                    <option value="">Select a Category</option>
+                    <option value="Education">Education</option>
+                    <option value="Beauty & Wellness">Beauty & Wellness</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Retail">Retail</option>
+                    <option value="IT & Software">IT & Software</option>
+                    <option value="Call Center">Call Center</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Hotel Management">Hotel Management</option>
+                </select>
+            </div>
+
+            <!-- Common Fields -->
+            <div class="row">
+                <label for="name">Name</label>
+                <input type="text" id="first-name" name="fn" placeholder="First Name" required>
+            </div>
+            <div class="row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+            </div>
+            <div class="row">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="123-456-7890" required>
+            </div>
+ 
+
+            <!-- Dynamic Fields -->
+            <div id="dynamic-fields"></div>
+
+            <!-- Address -->
+            <div class="section-title">Address</div>
+            <div class="row-full">
+                <label for="street">Street Address</label>
+                <input type="text" id="street" name="street" placeholder="Street Address" required>
+            </div>
+            <div class="row">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="City" required>
+            </div>
+            <div class="row">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="State" required>
+            </div>
+            <div class="row">
+                <label for="zip">Pin Code</label>
+                <input type="text" id="zip" name="pin" placeholder="Pin Code" required>
+            </div>
+            <div class="row">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" placeholder="Country" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" name="submit">Submit</button>
+        </form></form>
+    </div></div>
+
+    <script>
+        const categorySelect = document.getElementById('category-select');
+        const dynamicFieldsContainer = document.getElementById('dynamic-fields');
+
+        categorySelect.addEventListener('change', () => {
+            const category = categorySelect.value;
+            dynamicFieldsContainer.innerHTML = ''; // Clear previous fields
+
+            switch (category) {
+                case 'Education':
+                    dynamicFieldsContainer.innerHTML = `
+                        <div class="row">
+                            <label for="qualification">Highest Qualification</label>
+                            <input type="text" id="qualification" name="qualification" placeholder="e.g., Master's Degree" required>
+                        </div>
+                        <div class="row">
+                            <label for="specialization">Specialization</label>
+                            <input type="text" id="specialization" name="specialization" placeholder="e.g., Mathematics">
+                        </div>`;
+                    break;
+
+                case 'Beauty & Wellness':
+                    dynamicFieldsContainer.innerHTML = `
+                        <div class="row">
+                            <label for="experience">Years of Experience</label>
+                            <input type="number" id="experience" name="experience" placeholder="e.g., 5" required>
+                        </div>
+                        <div class="row">
+                            <label for="skills">Skills</label>
+                            <input type="text" id="skills" name="skills" placeholder="e.g., Hair Styling, Makeup">
+                        </div>`;
+                    break;
+
+                case 'Healthcare':
+                    dynamicFieldsContainer.innerHTML = `
+                        <div class="row">
+                            <label for="license">Medical License Number</label>
+                            <input type="text" id="license" name="license" placeholder="License Number" required>
+                        </div>
+                        <div class="row">
+                            <label for="specialty">Specialty</label>
+                            <input type="text" id="specialty" name="specialty" placeholder="e.g., Cardiology">
+                        </div>`;
+                    break;
+
+                case 'Retail':
+                    dynamicFieldsContainer.innerHTML = `
+                        <div class="row">
+                            <label for="store-name">Store Name</label>
+                            <input type="text" id="store-name" name="store_name" placeholder="Store Name" required>
+                        </div>
+                        <div class="row">
+                            <label for="position">Position</label>
+                            <input type="text" id="position" name="position" placeholder="e.g., Sales Associate">
+                        </div>`;
+                    break;
+
+                case 'IT & Software':
+                    dynamicFieldsContainer.innerHTML = `
+                    <div class=""
+                    <div class="row">
+                            <label for="languages">Programming Languages</label>
+                            <input type="text" id="languages" name="languages" placeholder="e.g., Python, JavaScript" required>
+                        </div>
+                        <div class="row">
+                            <label for="projects">Projects</label>
+                            <textarea id="projects" name="projects" placeholder="Describe your key projects"></textarea>
+                        </div>`;
+                    break;
+
+                case 'Call Center':
+                    dynamicFieldsContainer.innerHTML = `
+                        <div class="row">
+                            <label for="shift">Shift Preference</label>
+                            <input type="text" id="shift" name="shift" placeholder="e.g., Night Shift">
+                        </div>
+                        <div class="row">
+                            <label for="languages">Language Proficiency</label>
+                            <input type="text" id="languages" name="languages" placeholder="e.g., English, Spanish">
+                        </div>`;
+                    break;
+
+                case 'Finance':
+                    dynamicFieldsContainer.innerHTML = `
+                        <div class="row">
+                            <label for="certifications">Certifications</label>
+                            <input type="text" id="certifications" name="certifications" placeholder="e.g., CPA, CFA">
+                        </div>
+                        <div class="row">
+                            <label for="tools">Experience in Financial Tools</label>
+                            <input type="text" id="tools" name="tools" placeholder="e.g., QuickBooks, Excel">
+                        </div>`;
+                    break;
+
+                case 'Hotel Management':
+                    dynamicFieldsContainer.innerHTML = `
+                        <div class="row">
+                            <label for="position">Position Applying For</label>
+                            <input type="text" id="position" name="position" placeholder="e.g., Front Desk Manager">
+                        </div>
+                        <div class="row">
+                            <label for="experience">Experience</label>
+                            <input type="number" id="experience" name="experience" placeholder="Years of Experience">
+                        </div>`;
+                    break;
+
+                default:
+                    dynamicFieldsContainer.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+</html>

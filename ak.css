@@ -1,0 +1,322 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            position: relative;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-left: 420px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 15px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .toggle-button {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .group {
+            position: relative;
+        }
+
+        .group .input {
+            padding: 8px 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: width 0.3s;
+        }
+
+        .group .input:focus {
+            border-color: #007bff;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .toggle-button {
+                display: block;
+            }
+
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                background-color: #444;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                padding: 10px 0;
+                z-index: 100;
+            }
+
+            .navbar-links.active {
+                display: flex;
+            }
+
+            .navbar a {
+                text-align: center;
+                padding: 10px;
+                border-bottom: 1px solid #555;
+            }
+
+            .group {
+                text-align: center;
+                width: 100%;
+            }
+
+            .group .input {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .group .input {
+                width: 90%;
+            }
+            .navbar-links{
+              justify-content: center;
+            }
+        }
+
+        
+  * search .search-icon * 
+  .group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+  }
+
+  .input{
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  @media (max-width:480px) {
+    .input {
+      width: 100%;
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
+  
+  .input {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 10px;
+    height: 30px;
+    padding-left: 2.5rem;
+    box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #3a3737;
+    border: 0;
+    border-radius: 12px;
+    background-color: #d2d1d1;
+    outline: none;
+    color: #141414;
+    transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: text;
+    z-index: 0;
+  }
+  
+  .input::placeholder {
+    color: #0c0c0c;
+  }
+  
+  .input:hover {
+    box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #444;
+  }
+  
+  .input:active {
+    transform: scale(0.95);
+  }
+  
+  .input:focus {
+    box-shadow: 0 0 0 2.5px #2f303d;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+  }
+  
+  nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+  
+  }
+
+h1 {
+    font-size: 2.5rem;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+main {
+    padding: 20px;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.portfolio-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.photo-frame {
+    padding: 10px;
+    background-color: #fff;
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+
+h2 {
+    padding: 10px;
+    font-size: 1.5rem;
+    background-color: #333;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.portfolio-item:hover .photo-frame {
+    transform: scale(1.05);
+}
+
+button {
+    align-items: center;
+    background-image: linear-gradient(144deg, #20f269, #25eb50 50%, #05b230);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(20, 107, 133, 0.389) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-size: 18px;
+    justify-content: right;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+  }
+  
+  button:active,
+  button:hover {
+    outline: 0;
+  }
+  
+  button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  button:hover span {
+    background: none;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+ 
+
+@media (max-width: 768px) {
+    .portfolio {
+        justify-content: center;
+    }
+}

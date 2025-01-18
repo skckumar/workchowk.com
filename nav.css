@@ -1,0 +1,60 @@
+footer {
+    background-color: #333; /* Dark background color */
+    color: white; /* White text */
+    padding: 20px 10px; /* Padding for content spacing */
+    text-align: center; /* Center align text */
+}
+
+.footer-box {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center the footer content */
+    display: flex;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    justify-content: space-around; /* Space between sections */
+}
+
+.footer-section {
+    margin: 15px; /* Space between sections */
+}
+
+.footer-section h3 {
+    font-size: 18px; /* Section title size */
+    margin-bottom: 10px;
+    color: #f4f4f4;
+}
+
+.footer-section ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #ddd; /* Lighter text for links */
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+.footer-section ul li a:hover {
+    color: #fff; /* Brighten on hover */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa; /* Light text for bottom note */
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00aced; /* Change to blue on hover */
+}

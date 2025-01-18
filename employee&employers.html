@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workchowk.com</title>
+    <link rel="stylesheet" href="ak2.css">
+    <style>
+        .portfolio-item { display: none; } /* Hide all items by default */
+        .portfolio-item.visible { display: block; } /* Show only visible items */
+        .h4{ color: black; } 
+   </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Workchowk.com</h1>
+        <p>Come Here For Any Work</p>
+    </header>
+   
+     <nav class="navbar">
+       
+        <center><button class="toggle-button" aria-label="Toggle navigation">
+            ☰
+        </button>
+    
+     <div class="navbar-links">
+    
+            <a href="file:///C:/Users/ankit/OneDrive/Desktop/orai%20kam.com/workplace.com.html">Home</a>
+            <a href="file:///C:/Users/ankit/OneDrive/Desktop/orai%20kam.com/about page.html">About</a>
+            <a href="file:///C:/Users/ankit/OneDrive/Desktop/orai%20kam.com/service.html#">Service</a>
+            <a href="file:///C:/Users/ankit/OneDrive/Desktop/orai%20kam.com/about page.html">Login</a>
+            <a href="file:///C:/Users/ankit/OneDrive/Desktop/orai%20kam.com/contact page.html">Contact us</a>
+            <div class="group">
+            </center>
+                <input id="searchQuery" class="input" type="search" placeholder="Search..." oninput="filterItems()" />
+            </div>
+        </div>
+    </nav>
+    
+
+    <main>
+        <section class="portfolio">
+            <!-- 1 box -->
+            <div class="portfolio-item" data-category="contractor">
+                <div class="photo-frame">
+                    <img src="https://i.pinimg.com/736x/01/02/08/0102085ced4032d6b25aedc065dd8766.jpg">
+                </div>
+                
+                <h2><p id="f">Employee</p>
+                    Explore opportunities for job seekers to showcase your skills and get hired by top employers. Whether you're a beginner
+                     or an experienced professional, there are endless possibilities <center>  <a href="file:///C:/Users/ankit/OneDrive/Desktop/website/data1.html"><button>
+                        <span class="text">View Post</span>
+                    </button></a></center>
+                </h2>
+            </div>
+            <!-- 2 box -->
+            <div class="portfolio-item" data-category="labour">
+                <div class="photo-frame">
+                    <img src="https://www.contactmonkey.com/cm_wp/wp-content/uploads/2019/04/employer-branding-work-together.gif" alt="Project 3">
+                </div>
+                <h2><p id="f">Employers</p>
+                    Looking to hire the best talent? Post your job openings and find skilled professionals to help your business grow.
+                    <br>
+                     Get top-tier candidates who can make a difference in your team!
+                     <center>  <a href="file:///C:/Users/ankit/OneDrive/Desktop/website/get%20job.html"><button>
+                        <span class="text">View Post</span>
+                    </button>
+                </a></center>
+                </h2>
+            </div>
+            
+        </section>
+    </main>
+
+    <script>
+    // Toggle navbar for small screens
+const toggleButton = document.querySelector('.toggle-button');
+        const navbarLinks = document.querySelector('.navbar-links');
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+
+        function filterItems() {
+            const query = document.getElementById('searchQuery').value.toLowerCase();
+            const items = document.querySelectorAll('.portfolio-item');
+
+            items.forEach(item => {
+                const category = item.getAttribute('data-category').toLowerCase();
+                if (category.includes(query) || item.textContent.toLowerCase().includes(query)) {
+                    item.classList.add('visible');
+                } else {
+                    item.classList.remove('visible');
+                }
+            });
+        }
+
+        // Initially show all items
+        document.querySelectorAll('.portfolio-item').forEach(item => item.classList.add('visible'));
+    </script>
+    <br><br>
+    <br>
+
+    <footer class="footer">
+        <div class="footer-box">
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">SEO Services</a></li>
+                    <li><a href="#">Content Marketing</a></li>
+                    <li><a href="#">Link Building</a></li>
+                    <li><a href="#">Technical SEO</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about page.html">About Us</a></li>
+                    <li><a href="contact page.html">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+                <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          rel="stylesheet"
+        />
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/channel/UCXgVDHnlu4x2n_BWC0yOM3A" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/reel/C_iw87WNbpQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.link/fqhbrt" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 YourCompany. All Rights Reserved.</p>
+        </div>
+    </footer>
+      
+</body>
+</html>
